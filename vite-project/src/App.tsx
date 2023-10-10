@@ -1,6 +1,5 @@
 import logo from "./assets/Logo.png";
-import background from "./assets/undraw_Savings_re_eq4w.png";
-import calc from "./components/calc";
+import background from "./assets/background.png";
 import { LuArrowLeftRight } from "react-icons/lu";
 import "./App.scss";
 
@@ -18,7 +17,7 @@ function App() {
       </header>
       <main>
         <section className="home-container">
-          <form className="home__form off">
+          <form className="home__form">
             <div className="row">
               <div className="colum">
                 <label>Dólar</label>
@@ -58,18 +57,18 @@ function App() {
                 />
               </div>
             </div>
-            <button className="home__button" onClick={calc}>
-              <LuArrowLeftRight className="icon__btn" />
+            <button className="home__button">
+              <LuArrowLeftRight />
               Converter
             </button>
           </form>
-          <div className="home__resultado">
+          {/* <div className="home__resultado">
             <button>Voltar</button>
             <p>O resultado do calculo é</p>
             <h1>R$ 255,55</h1>
             <p>Compra no dinheiro taxa de 5,3%</p>
             <p>Cotação do dólar: R$1,00 = R$ 5,20</p>
-          </div>
+          </div> */}
           <div className="home__img">
             <img className="home__background" src={background} />
           </div>

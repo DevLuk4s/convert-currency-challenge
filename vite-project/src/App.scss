@@ -1,125 +1,114 @@
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+.header-container {
+  width: 100%;
+  max-width: 620px;
+  margin: 50px 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  .header-container {
-    width: 100%;
-    max-width: 620px;
-    margin: 50px 0 0 50px;
+  .info__container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .info__container {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .info__date-bold {
-      font-weight: bold;
-      color: #000000;
-    }
-
-    .info__regular {
-      font-weight: 400;
-      color: #8c9cad;
-    }
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .home-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 50px;
-    flex-direction: row;
+  .info__date-bold {
+    font-weight: bold;
+    color: #000000;
+  }
 
-    .home__img img {
-      max-width: 500px;
-      width: 100%;
+  .info__regular {
+    font-weight: 400;
+    color: #8c9cad;
+  }
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 50px;
+  flex-direction: row;
+
+  .home__img img {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .home__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .row {
+      display: flex;
+      flex-direction: row;
     }
 
-    .home__form {
+    .colum {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+    }
 
-      .row {
-        display: flex;
-        flex-direction: row;
-      }
+    .home__text-bold {
+      font-weight: bold;
+    }
 
-      .colum {
-        display: flex;
-        flex-direction: column;
-      }
+    .home__input-number {
+      outline: none;
+      border: none;
+      width: 150px;
+      margin-right: 15px;
+      padding: 10px;
+      border: 1px solid #8c9cad;
+    }
 
-      .home__text-bold {
-        font-weight: bold;
-      }
+    .home__input {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 15px;
+    }
 
-      .home__input-number {
-        outline: none;
-        border: none;
-        width: 150px;
-        margin-right: 15px;
-        padding: 10px;
-        border: 1px solid #8c9cad;
-      }
+    .home__input-radio {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      appearance: none;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: relative;
+      border: 2px solid #008b57;
+      margin-right: 5px;
+    }
 
-      .home__input {
-        display: flex;
-        flex-direction: row-reverse;
-        margin-right: 15px;
-      }
+    .home__input-radio::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #008b57;
+      opacity: 0;
+      transition: all 300ms ease;
+    }
 
-      .home__input-radio {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        appearance: none;
-        cursor: pointer;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        position: relative;
-        border: 2px solid #008b57;
-        margin-right: 5px;
-      }
+    .home__input-radio:checked::before {
+      opacity: 1;
+    }
 
-      .home__input-radio::before {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #008b57;
-        opacity: 0;
-        transition: all 300ms ease-in-out;
-      }
-
-      .home__input-radio:checked::before {
-        opacity: 1;
-      }
-
-      .home__button {
-        width: 100px;
-        height: 40px;
-        border-radius: 8px;
-        border: 1px solid #008b57;
-        background-color: #8c9cad;
-        // background-color: #00ab63;
-        color: #ffffff;
-      }
-
-      .icon__btn {
-        margin-right: 7px;
-      }
-
-      .off {
-        display: none;
-      }
+    .home__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #008b57;
+      background-color: #8c9cad;
+      color: #ffffff;
+      // background-color: #00ab63;
     }
   }
 }
