@@ -1,11 +1,14 @@
 import logo from "./assets/Logo.png";
 import background from "./assets/background.png";
 import { LuArrowLeftRight } from "react-icons/lu";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import convert from "./utils/convert";
 import "./App.scss";
+// import { useState } from "react";
 
 function App() {
   return (
-    <body>
+    <>
       <header className="header-container">
         <img src={logo} />
         <div className="info__container">
@@ -57,24 +60,29 @@ function App() {
                 />
               </div>
             </div>
-            <button className="home__button">
+            <button className="home__button" onClick={convert}>
               <LuArrowLeftRight />
               Converter
             </button>
           </form>
-          {/* <div className="home__resultado">
-            <button>Voltar</button>
-            <p>O resultado do calculo é</p>
-            <h1>R$ 255,55</h1>
-            <p>Compra no dinheiro taxa de 5,3%</p>
-            <p>Cotação do dólar: R$1,00 = R$ 5,20</p>
-          </div> */}
+          <div className="home__resultado disabled">
+            <button className="home__btn-arrowback">
+              <AiOutlineArrowLeft />
+              Voltar
+            </button>
+            <p className="home__text-1">O resultado do calculo é</p>
+            <h1 className="home__tittle-green">R$ 255,55</h1>
+            <p className="home__text-gray">Compra no dinheiro taxa de 5,3%</p>
+            <p className="home__text-gray">
+              Cotação do dólar: R$1,00 = R$ 5,20
+            </p>
+          </div>
           <div className="home__img">
             <img className="home__background" src={background} />
           </div>
         </section>
       </main>
-    </body>
+    </>
   );
 }
 
